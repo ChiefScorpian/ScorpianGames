@@ -1,0 +1,27 @@
+{
+    "games": [
+
+        {
+            "name": "Dead Signal",
+            "type": "Pc Game",
+            "description": "Dead Signal is a upcoming horror game that is being developed by Scorpian Games.",
+            "image": "",
+            "link": ""
+        },
+        {
+            "name": "The Ballpit",
+            "type": "VR Game",
+            "description": "The Ballpit is a multiplayer XR shooter developed by Scorpian Games. The game is currently on hold for unrelated reasons.",
+            "image": "",
+            "link": "https://www.meta.com/experiences/theballpit/25632429496365842/"
+        },
+        {
+            "name": "Long Dream",
+            "type": "VR Game",
+            "description": "Long Dream is a multiplayer VR horror game that takes place in liminal areas, including the backrooms. The game is currently in development and is being developed by Scorpian Games. It is on hold as Scorpian Games is on break for VR development.",
+            "image": "",
+            "link": ""
+        }
+    ]
+
+}

@@ -9,7 +9,7 @@
 body {
     font-family: 'Space Grotesk', sans-serif;
     background-color: var(--logo-blue);
-    background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+    background-image: url("Img/carbon-fibre.png");
     color: var(--ink-black);
     min-height: 100vh; /* Fixed: Replaced invalid min-h-screen with standard CSS syntax */
 }
@@ -25,6 +25,10 @@ body {
     border-radius: 2px;
     position: relative;
     clip-path: polygon(1% 1%, 100% 0%, 99% 99%, 0% 100%);
+}
+
+.sketch-card.gray {
+    background: rgb(169, 198, 214);
 }
 
 .nav-btn, .discord-btn {
