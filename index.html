@@ -100,24 +100,45 @@
     </main>
 
     <script>
-        function showPage(pageId) {
-            const pages = document.querySelectorAll('.page-content');
-            pages.forEach(page => page.classList.remove('active'));
+    function showPage(pageId, updateHash = true) {
+        const pages = document.querySelectorAll('.page-content');
+        pages.forEach(page => page.classList.remove('active'));
 
-            const buttons = document.querySelectorAll('.nav-btn');
-            buttons.forEach(btn => btn.classList.remove('active'));
+        const buttons = document.querySelectorAll('.nav-btn');
+        buttons.forEach(btn => btn.classList.remove('active'));
 
-            const selectedPage = document.getElementById(pageId);
-            if (selectedPage) {
-                selectedPage.classList.add('active');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+        const selectedPage = document.getElementById(pageId);
+
+        if (selectedPage) {
+            selectedPage.classList.add('active');
+
+            if (updateHash) {
+                window.location.hash = pageId;
             }
 
-            const activeBtn = document.getElementById('btn-' + pageId);
-            if (activeBtn) {
-                activeBtn.classList.add('active');
-            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-    </script>
+
+        const activeBtn = document.getElementById('btn-' + pageId);
+
+        if (activeBtn) {
+            activeBtn.classList.add('active');
+        }
+    }
+
+    function loadPageFromHash() {
+        const pageId = window.location.hash.substring(1);
+
+        if (pageId && document.getElementById(pageId)) {
+            showPage(pageId, false);
+        } else {
+            showPage('home', false);
+        }
+    }
+
+    window.addEventListener('hashchange', loadPageFromHash);
+
+    loadPageFromHash();
+</script>
 </body>
 </html>
