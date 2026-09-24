@@ -24,7 +24,7 @@ body {
     box-shadow: 8px 8px 0px var(--ink-black);
     border-radius: 2px;
     position: relative;
-    clip-path: polygon(1% 1%, 100% 0%, 99% 99%, 0% 100%);
+    /* removed clip-path to avoid small wedge cutouts at edges */
 }
 
 .sketch-card.gray {
