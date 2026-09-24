@@ -11,7 +11,7 @@ body {
     background-color: var(--logo-blue);
     background-image: url("Img/carbon-fibre.png");
     color: var(--ink-black);
-    min-height: 100vh; /* Fixed: Replaced invalid min-h-screen with standard CSS syntax */
+    min-height: 100vh; 
 }
 
 .handwritten {
@@ -24,7 +24,6 @@ body {
     box-shadow: 8px 8px 0px var(--ink-black);
     border-radius: 2px;
     position: relative;
-    /* removed clip-path to avoid small wedge cutouts at edges */
 }
 
 .sketch-card.gray {
@@ -93,8 +92,6 @@ body {
     clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
     font-weight: 900;
 }
-
-/* Translated Tailwind classes into Native CSS rules below */
 
 .policy-text h2 {
     font-size: 1.5rem;
