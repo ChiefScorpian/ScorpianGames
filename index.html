@@ -75,7 +75,7 @@
 
                 </div>
 
-                
+
             </div>
             <div class="sketch-card gray p-5 sm:p-8 md:p-10 lg:p-16 text-center">
                 <h2 class="text-4xl font-black mb-8 uppercase italic underline decoration-white">
@@ -85,7 +85,7 @@
                 <div id="discontinuedProjectsContainer" class="grid gap-8">
 
                 </div>
-                
+
                 <script>
                     const projectsContainer = document.getElementById("projects-container");
                     const discontinuedProjectsContainer = document.getElementById("discontinuedProjectsContainer");
@@ -95,6 +95,12 @@
                         .then(data => {
 
                             data.games.forEach(project => {
+
+                                console.log(
+                                    project.name,
+                                    project.discontinued,
+                                    typeof project.discontinued
+                                );
 
                                 const projectCard = document.createElement("div");
 
@@ -110,7 +116,7 @@
                             ${project.description}
                         </p>
 
-                        <image src="${project.image}" alt="${project.name} Image" class="mb-4 w-full h-auto object-cover rounded-lg">
+                        <img src="${project.image}" alt="${project.name} Image" class="mb-4 w-full h-auto object-cover rounded-lg">
 
                         <a href="${project.link}"
                            target="_blank"
